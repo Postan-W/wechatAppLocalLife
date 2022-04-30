@@ -1,0 +1,49 @@
+/* pages/home/home.wxss */
+swiper{
+    height: 350rpx;
+}
+swiper image{
+    height: 100%;
+    width: 100%;
+}
+.gridlist{
+    margin-top: 10rpx;
+    display: flex;/*子容器按设置排布，默认横向，可以通过flex-direction设置*/
+    flex-wrap: wrap;/*允许子容器换行排布*/
+    justify-content: space-around;/*等距排布*/
+    border-top: 1rpx solid #efefef;
+    border-left: 1rpx solid #efefef;
+}
+.griditem{
+    width:33.3%;
+    height: 200rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*子容器居中，横轴*/
+    justify-content: center;/*子容器在主轴(这里是column)方向居中*/
+    border-right: 1rpx solid #efefef;
+    border-bottom: 1rpx solid #efefef;
+    /*因为每个格子是33.3%，再加上边框或padding，那么一行就排不下了，所以要设置
+    box-sizing: content-box; //默认值 内容真正宽度 = 设置的宽度
+    box-sizing: border-box; // 内容真正宽度width= 设置的width- 左右padding - 左右border
+    box-sizing: inherit;// 规定从父元素继承此值*/
+    box-sizing: border-box;
+}
+.griditem image{
+    height: 60rpx;
+    width: 60rpx;
+}
+.griditem text{
+    font-size: 24rpx;
+    margin-top: 10rpx;
+}
+.imgbox{
+    display: flex;
+    padding-right: 10rpx;
+    padding-left: 10rpx;
+    margin-top: 10rpx;
+    justify-content: space-around;/*均匀排列每个元素,每个元素周围分配相同的空间*/
+}
+.imgbox image{
+    width: 45%;
+}
