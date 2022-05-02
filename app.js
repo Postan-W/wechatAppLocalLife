@@ -13,6 +13,8 @@ App({
       }
     })
   },
+  onShow(){console.log("从后天到前台")},
+  onHide(){console.log("从前台到后台")},
   globalData: {
     userInfo: null
   }
