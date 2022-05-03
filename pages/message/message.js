@@ -5,7 +5,14 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        count: 0,
+        username:"wmz",
+        country:"CHINA"
+    },
+    addCount(){
+        this.setData({
+            count:this.data.count + 1
+        })
     },
 
     /**

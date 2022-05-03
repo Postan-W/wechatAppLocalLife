@@ -1,0 +1,36 @@
+/* pages/shoplist/shoplist.wxss */
+.shop-item{
+    display: flex;
+    padding: 15rpx;
+    border: 1rpx solid #ecebeb;
+    border-radius: 10rpx;
+    margin: 15rpx;
+    box-shadow: 1rpx 1rpx 15rpx rgb(231, 243, 246);/*阴影。横向偏移、纵向偏移、扩散大小、颜色*/
+}
+.thumb image{
+    width: 250rpx;
+    height: 250rpx;
+    /*为了图片周围没有空白，设置display为block：
+    1.一个块级元素独占一行
+    2.元素的高度、宽度、行高以及顶和底边距都可设置
+    3.元素宽度在不设置的情况下，是它本身父容器的100%。这个是重点
+    拓展：display：inline
+    内联元素特点：
+    1、和其他元素都在一行上；
+    2、元素的高度、宽度及顶部和底部边距不可设置；
+    3、元素的宽度就是它包含的文字或图片的宽度，不可改变。
+    */
+    display: block;
+    margin-right: 15rpx;
+}
+.info{
+    display: flex;/*弹性布局*/
+    flex-direction: column;/*容器内项目的排列方向，即指定主轴(默认横向排列)*/
+    justify-content: space-around;/*项目在主轴上的对齐方式,常用的是
+    1.center：在主轴上居中排列
+    2.space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍*/
+    font-size: 30rpx;
+}
+.shop-title{
+    font-weight: bold;
+}

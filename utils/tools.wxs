@@ -1,0 +1,4 @@
+function toLower(str){return str.toLowerCase()} 
+module.exports = {
+    toLowerFunction:toLower
+}
