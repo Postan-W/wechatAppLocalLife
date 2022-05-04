@@ -1,4 +1,13 @@
 function toLower(str){return str.toLowerCase()} 
+function splitPhoneNumber(str){
+    if(str.length !== 11)return str
+    //先将号码分割成11个数字的数组
+    var arr = str.split('')
+    arr.splice(3,0,"-")//3：从位置3开始；0：删除0个元素；"-"：插入-
+    arr.splice(8,0,"-")
+    return arr.join("")
+}
 module.exports = {
-    toLowerFunction:toLower
+    toLowerFunction:toLower,
+    splitNumber:splitPhoneNumber
 }
