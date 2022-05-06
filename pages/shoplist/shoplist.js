@@ -1,6 +1,5 @@
 // pages/shoplist/shoplist.js
 Page({
-
     /**
      * 页面的初始数据
      */
@@ -16,6 +15,7 @@ Page({
     /**
      * 生命周期函数--监听页面加载
      */
+    //options是页面参数
     onLoad(options) {
         this.setData({
             query:options
@@ -41,6 +41,7 @@ Page({
          success:(res)=>{
              this.setData({
                  shopList:[...this.data.shopList,...res.data],
+                 //header取出来的值是字符串，减法操作使得其被转为数值型，并且减去0数值不变
                  total:res.header['X-Total-Count'] - 0
              })
          },
